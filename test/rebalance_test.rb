@@ -64,7 +64,7 @@ class RebalanceTest < ::Test
   def test_it_generates_exchanges_for_more_complex_cases
     current_holdings = { a: 10, b: 20 }
     desired_holdings = { a: 20, b: 10 }
-
+    byebug
     exchanges = Rebalance.new(current_holdings, desired_holdings).solution
     exchanges = sanitize_exchanges(exchanges)
 
